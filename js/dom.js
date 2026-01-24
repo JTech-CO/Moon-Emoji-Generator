@@ -1,0 +1,40 @@
+export const els = {
+    btnModeImage: document.getElementById('btn-mode-image'),
+    btnModeText: document.getElementById('btn-mode-text'),
+    uiImageMode: document.getElementById('ui-image-mode'),
+    uiTextMode: document.getElementById('ui-text-mode'),
+    dropzone: document.getElementById('dropzone'),
+    fileInput: document.getElementById('file-input'),
+    imagePreview: document.getElementById('image-preview'),
+    previewContainer: document.getElementById('preview-container'),
+    textInput: document.getElementById('text-input'),
+    
+    checkAspectRatio: document.getElementById('check-aspect-ratio'),
+    inputWidth: document.getElementById('input-width'),
+    valWidth: document.getElementById('val-width'),
+    containerHeight: document.getElementById('container-height'),
+    inputHeight: document.getElementById('input-height'),
+    valHeight: document.getElementById('val-height'),
+    inputContrast: document.getElementById('input-contrast'),
+    valContrast: document.getElementById('val-contrast'),
+    
+    btnAntialiasing: document.getElementById('btn-antialiasing'),
+    toggleAntialiasing: document.getElementById('toggle-antialiasing'),
+    containerCustomChars: document.getElementById('container-custom-chars'),
+    inputCharDark: document.getElementById('input-char-dark'),
+    inputCharLight: document.getElementById('input-char-light'),
+
+    btnInvert: document.getElementById('btn-invert'),
+    toggleInvert: document.getElementById('toggle-invert'),
+    
+    resultArt: document.getElementById('result-art'),
+    outputContainer: document.getElementById('output-container'),
+    outputContent: document.getElementById('output-content'),
+    loader: document.getElementById('loader'),
+    emptyState: document.getElementById('empty-state'),
+    hintOverlay: document.getElementById('hint-overlay'),
+    zoomBadge: document.getElementById('zoom-badge'),
+    btnCopy: document.getElementById('btn-copy'),
+    btnResetView: document.getElementById('btn-reset-view'),
+    canvas: document.getElementById('process-canvas')
+};

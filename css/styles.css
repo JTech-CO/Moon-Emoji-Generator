@@ -1,0 +1,208 @@
+/* ===================================================================
+   Moonlight Design Style
+   =================================================================== */
+
+:root {
+    --moon-bg-void: #050914;
+    --moon-bg-surface: #1B263B;
+    --moon-text-main: #E2E8F0;
+    --moon-text-muted: rgba(226, 232, 240, 0.5);
+    --moon-accent: #FFFDD0;
+    
+    --moon-border-color: rgba(255, 255, 255, 0.06);
+    --moon-border-hover: rgba(255, 255, 255, 0.12);
+
+    --font-display: 'Playfair Display', serif;
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Montserrat', 'Noto Sans KR', sans-serif;
+
+    --moon-radius-sm: 4px;
+    --moon-radius-md: 12px;
+    --moon-radius-lg: 24px;
+}
+
+body {
+    background-color: var(--moon-bg-void);
+    color: var(--moon-text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    user-select: text;
+    -webkit-user-select: text;
+    cursor: text;
+}
+
+::selection {
+    background: var(--moon-accent);
+    color: var(--moon-bg-void);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--moon-bg-void);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.emoji-font {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
+}
+
+.moon-bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.moon-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: radial-gradient(800px circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.04), transparent 40%);
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+h1, h2, h3 { font-family: var(--font-title); }
+
+.text-accent { color: var(--moon-accent); }
+.text-muted { color: var(--moon-text-muted); }
+
+.moon-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--moon-border-color);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--moon-radius-lg);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.moon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid rgba(240, 244, 248, 0.2);
+    color: var(--moon-text-main);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--moon-radius-sm);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    user-select: none; 
+}
+
+.moon-btn:hover {
+    background: rgba(240, 244, 248, 0.05);
+    border-color: var(--moon-accent);
+    box-shadow: 0 0 15px rgba(255, 253, 208, 0.1);
+    color: var(--moon-accent);
+}
+
+.moon-btn.active {
+    background: rgba(255, 253, 208, 0.1);
+    border-color: var(--moon-accent);
+    color: var(--moon-accent);
+    box-shadow: 0 0 20px rgba(255, 253, 208, 0.15);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: var(--moon-accent);
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 0 10px rgba(255, 253, 208, 0.5);
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.moon-input {
+    background: rgba(5, 9, 20, 0.6) !important;
+    border: 1px solid var(--moon-border-color) !important;
+    color: var(--moon-text-main) !important;
+    transition: all 0.3s ease;
+}
+.moon-input:focus {
+    border-color: var(--moon-accent) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.moon-divider {
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin: 1.5rem 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+@keyframes moonFadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.moon-fade-up {
+    animation: moonFadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.toggle-bg {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.toggle-bg.active {
+    background-color: var(--moon-accent);
+}
+.toggle-dot {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.toggle-bg.active .toggle-dot {
+    background-color: var(--moon-bg-void);
+}
