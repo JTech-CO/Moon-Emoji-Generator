@@ -40,7 +40,7 @@
    브라우저에서 `http://localhost:8000`으로 접속합니다.
 
 2. **GitHub Pages**
-   - [달 문자 생성기](<https://jtech-co.github.io/my-website/moon-emoji-generator/index.html>)
+   - [달 문자 생성기](<https://jtech-co.github.io/Moon-Emoji-Generator/>)
 
 ## 4. 폴더 구조 (Structure)
 
